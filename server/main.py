@@ -12,7 +12,10 @@ def register_client(client):
 async def send_messages(message):
     if CLIENTS:
         for client in CLIENTS:
-            await client.send(message)
+            try:
+                await client.send(message)
+            except:
+                pass
 
 #Función que se ejecuta cuando un cliente se conecta o active un evento
 async def event(websocket, _):
@@ -25,7 +28,7 @@ async def event(websocket, _):
         await send_messages(message)
 
 #Instanciar el servidor de websockets
-start_server = websockets.serve(event, "127.0.0.1", 6789)
+start_server = websockets.serve(event, "0.0.0.0", 6789)
 
 #Iniciar la escucha del servidor
 asyncio.get_event_loop().run_until_complete(start_server)

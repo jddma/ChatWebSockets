@@ -30,7 +30,17 @@ $(document).ready(function () {
 
     function receiveMessage (event) {
 
-        console.log(event.data);
+        let table = $("#mensajes");
+        
+        let msgData = JSON.parse(event.data);
+
+        let newRow = document.createElement("tr");
+        let newColumn = document.createElement("td");
+        let newMessage = document.createTextNode(`${msgData.name}: ${msgData.content}`);
+
+        newColumn.appendChild(newMessage);
+        newRow.appendChild(newColumn);
+        table.append(newRow);
 
     }
 

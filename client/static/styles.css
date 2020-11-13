@@ -1,0 +1,67 @@
+button{
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.profile{
+    width: 50px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.form-control{
+    margin-top: 20px;
+}
+
+.chat{
+    width: 75%;
+    margin-top: 2%;
+}
+
+.contenido{
+    background-color: white;
+    border-radius: 15px;
+    height: 600px;
+    margin: 15px;
+}
+
+.ingresoMensaje{
+    width: 88%;
+    height: 35px;
+    margin-right: 2%;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+#table_container{
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+#table{
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 15px;
+    font-size: 15px;
+    text-align: center;
+    border-collapse: collapse;
+    color: black;
+}
+
+td, th{
+    padding: 15px;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover{
+    background-color: #369681;
+    color: white;
+}
+
+.my{
+    color:red;
+}
